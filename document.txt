@@ -1,0 +1,7 @@
+1. Install pip:  sudo apt-get install python-pip
+2.python evs.py
+# this will show both the instantaneous energy consumption 
+value (at time t) uptil now in Watt-hours as well as the cumulative energy consumed at time t-10 minutes.
+So we need to find the energy consumed in the last 10 minutes which is a differnce of these values
+3. python evsavg.py
+# gives the avg values which have to be determined(benchmark)
