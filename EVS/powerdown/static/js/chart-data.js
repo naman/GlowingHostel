@@ -1,8 +1,9 @@
-var randomScalingFactor = function(){ return Math.round(Math.random()*1000)};
+var randomScalingFactor = function(){ return Math.round(Math.random()*1000000)};
 
 	var lineChartData = {
-			labels : ["January","February","March","April","May","June","July"],
+			labels  : ["January","February","March","April","May"],
 			datasets : [
+				//government values
 				{
 					label: "My First dataset",
 					fillColor : "rgba(220,220,220,0.2)",
@@ -11,8 +12,9 @@ var randomScalingFactor = function(){ return Math.round(Math.random()*1000)};
 					pointStrokeColor : "#fff",
 					pointHighlightFill : "#fff",
 					pointHighlightStroke : "rgba(220,220,220,1)",
-					data : [randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor()]
+					data : [600000,610200,650000,700000,715000]
 				},
+				//hostel values
 				{
 					label: "My Second dataset",
 					fillColor : "rgba(48, 164, 255, 0.2)",
@@ -21,85 +23,81 @@ var randomScalingFactor = function(){ return Math.round(Math.random()*1000)};
 					pointStrokeColor : "#fff",
 					pointHighlightFill : "#fff",
 					pointHighlightStroke : "rgba(48, 164, 255, 1)",
-					data : [randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor()]
+					data : [620000,680400,670400,715000,800000]
 				}
 			]
 
 		}
 
 	var barChartData = {
-			labels : ["January","February","March","April","May","June","July"],
+			labels : ["January","February","March","April","May"],
 			datasets : [
 				{
 					fillColor : "rgba(220,220,220,0.5)",
 					strokeColor : "rgba(220,220,220,0.8)",
 					highlightFill: "rgba(220,220,220,0.75)",
 					highlightStroke: "rgba(220,220,220,1)",
-					data : [randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor()]
+					data : [600000,610200,650000,700000,715000]
 				},
 				{
 					fillColor : "rgba(48, 164, 255, 0.2)",
 					strokeColor : "rgba(48, 164, 255, 0.8)",
 					highlightFill : "rgba(48, 164, 255, 0.75)",
 					highlightStroke : "rgba(48, 164, 255, 1)",
-					data : [randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor()]
+					data : [620000,680400,670400,715000,800000]
 				}
 			]
 
 		}
 
+	//percentage consumption per floor
 	var pieData = [
 				{
-					value: 300,
+					value: 4002308,
 					color:"#30a5ff",
 					highlight: "#62b9fb",
-					label: "Blue"
+					label: "Ground Floor"
 				},
 				{
-					value: 50,
+					value: 4633020,
 					color: "#ffb53e",
 					highlight: "#fac878",
-					label: "Orange"
+					label: "First Floor"
 				},
 				{
-					value: 100,
+					value: 3782089,
 					color: "#1ebfae",
 					highlight: "#3cdfce",
-					label: "Teal"
+					label: "Second Floor"
 				},
 				{
-					value: 120,
+					value: 5928019,
 					color: "#f9243f",
 					highlight: "#f6495f",
-					label: "Red"
+					label: "Third Floor"
+				},
+				{
+					value: 6573849,
+					color: "#19A319",
+					highlight: "#80CC80",
+					label: "Fourth Floor"
 				}
 
 			];
 
+	//percentage consumption per wing
 	var doughnutData = [
 					{
-						value: 300,
-						color:"#30a5ff",
-						highlight: "#62b9fb",
-						label: "Blue"
-					},
-					{
-						value: 50,
+						value: 2871928,
 						color: "#ffb53e",
 						highlight: "#fac878",
-						label: "Orange"
+						label: "A + B/2 Wing"
 					},
 					{
-						value: 100,
+						value: 2381923,
 						color: "#1ebfae",
 						highlight: "#3cdfce",
-						label: "Teal"
-					},
-					{
-						value: 120,
-						color: "#f9243f",
-						highlight: "#f6495f",
-						label: "Red"
+						label: "B/2 + C Wing"
 					}
 
 				];

@@ -6,21 +6,12 @@ import datetime
 def index(request):
 	py_ab_I = [4503.4,5528,3630.7,5954.7,4090.9]
 	py_bc_I = [16728,7948,7152.75,6123.92,2338.2]
-	py_ab_II = [6567.05,7213.55,4268.85,9015.5,4020.45]
-	py_bc_II = [14605.5,12537.875,10309.0,8054.1875,2647.4375]
-
 
 	# [4587, 6463, 5591, 10286, 7914]
 # [15971, 34783, 45722, 28583, 21874]
-# [8906, 9080, 6169, 14784, 9061]
-# [6471, 14916, 18627, 10845, 8282]
+
 	ty_ab_I=[]
 	ty_bc_I=[]
-
-	ty_ab_II=[]
-	ty_bc_II=[]
-
-
 
 	''' extracting date time for start and end time data -> to capture limited data'''
 	'''time=(datetime.datetime.now() - datetime.timedelta(days=1)).strftime('%s')
@@ -174,6 +165,37 @@ def index(request):
 #	print "gh-4-bc end\n"
 	#xxxxxxxxxxx Girls' hostel BC wing 4th floor ends xxxxxxxxxxxxxxxxxxx'''
 
+	ratios = []
+	wing_ratio = []
+	for x in xrange(0,5):
+		rat = (ty_ab_I[x] / py_ab_I[x]) -1
+		wing_ratio.append(color(rat))
+
+	ratios.append(wing_ratio)
+
+	wing_ratio_f = []
+	for x in xrange(0,5):
+		rat = (ty_bc_I[x] / py_bc_I[x]) -1
+		wing_ratio_f.append(color(rat))
+
+	ratios.append(wing_ratio_f)
+	print ratios
+
+	context = {'ratios':ratios}
+	return render(request, 'powerdown/index.html', context)
+
+
+def index_night(request):
+	py_ab_II = [6567.05,7213.55,4268.85,9015.5,4020.45]
+	py_bc_II = [14605.5,12537.875,10309.0,8054.1875,2647.4375]
+
+
+# [8906, 9080, 6169, 14784, 9061]
+# [6471, 14916, 18627, 10845, 8282]
+
+	ty_ab_II=[]
+	ty_bc_II=[]
+
 	#########################################
 #	New
 	#########################################
@@ -189,8 +211,8 @@ def index(request):
 	gh_0_ab=requests.get("http://energy.iiitd.edu.in:9102/backend/api/data/uuid/a2095480-eed6-584e-b5e4-d7199eee9ac3?starttime="+newtime_two+"000&endtime="+time+"000&format=csv&tags=&timefmt=iso8601&")
 
 
-	x0=gh_0_ab.content.split(',')[-1].split('\r')[0]
-	y0=gh_0_ab.text.split(',')[2].split('\r')[0]#give last 6hrs power consumption
+	x0 = gh_0_ab.content.split(',')[-1].split('\r')[0]
+	y0 = gh_0_ab.text.split(',')[2].split('\r')[0] #give last 6hrs power consumption
 #	print "gh-0-ab starts:"
 #	print
 	ty_ab_II.append(int(float(x0)) - int(float(y0)))
@@ -330,41 +352,21 @@ def index(request):
 #	print "gh-4-bc end\n"
 	#xxxxxxxxxxx Girls' hostel BC wing 4th floor ends xxxxxxxxxxxxxxxxxxx'''
 	
-
 	ratios = []
 	wing_ratio = []
 	for x in xrange(0,5):
-		rat = (ty_ab_I[x] / py_ab_I[x]) -1
+		rat = (ty_ab_II[x] / py_ab_II[x]) -1
 		wing_ratio.append(color(rat))
-
 	ratios.append(wing_ratio)
 
-	wing_ratio_f = []
+	wing_ratio = []
 	for x in xrange(0,5):
-		rat = (ty_bc_I[x] / py_bc_I[x]) -1
-		wing_ratio_f.append(color(rat))
-
-	ratios.append(wing_ratio_f)
-	print ratios
-
-	# wing_ratio = []
-	# for x in xrange(0,5):
-	# 	rat = (ty_ab_II[x] / py_ab_II[x]) -1
-	# 	wing_ratio.append(color(rat))
-
-	# ratios.append(wing_ratio)
-
-	# wing_ratio = []
-	# for x in xrange(0,5):
-	# 	rat = (ty_bc_II[x] / py_bc_II[x]) -1
-	# 	wing_ratio.append(color(rat))
-
-	# ratios.append(wing_ratio)
-	# print ratios
-	
+		rat = (ty_bc_II[x] / py_bc_II[x]) -1
+		wing_ratio.append(color(rat))
+	ratios.append(wing_ratio)
 
 	context = {'ratios':ratios}
-	return render(request, 'powerdown/index.html', context)
+	return render(request, 'powerdown/index_night.html', context)
 
 def stats(request):
 	return render(request, 'powerdown/charts.html')

@@ -2,7 +2,7 @@
 {% block content %}
 		<div class="row">
 			<div class="col-lg-12">
-				<h1 class="page-header">Charts</h1>
+				<h1 class="page-header">Statistics</h1>
 
 			</div>
 		</div><!--/.row-->
@@ -10,24 +10,27 @@
 		<div class="row">
 			<div class="col-lg-12">
 				<div class="panel panel-default">
-					<div class="panel-heading">Line Chart</div>
+					<div class="panel-heading">Energy Consumption (per month)</div>
 					<div class="panel-body">
 						<div class="canvas-wrapper">
 							<canvas class="main-chart" id="line-chart" height="200" width="600"></canvas>
 						</div>
+		<h6 style="margin-left:1em">*Government Alloted Values are ideal, shown in Grey. </h6>	
+		<h6 style="margin-left:1em">*All values are in watt-hour.</h6>	
 					</div>
 				</div>
 			</div>
-		</div><!--/.row-->
-
+		</div>
 		<div class="row">
 			<div class="col-lg-12">
 				<div class="panel panel-default">
-					<div class="panel-heading">Bar Chart</div>
+					<div class="panel-heading">Energy Consumption (this semester)</div>
 					<div class="panel-body">
 						<div class="canvas-wrapper">
 							<canvas class="main-chart" id="bar-chart" height="200" width="600"></canvas>
 						</div>
+						<h6 style="margin-left:1em">*Government Alloted Values are ideal, shown in Grey. </h6>
+						<h6 style="margin-left:1em">*All values are in watt-hour.</h6>	
 					</div>
 				</div>
 			</div>
@@ -36,21 +39,25 @@
 		<div class="row">
 			<div class="col-md-6">
 				<div class="panel panel-default">
-					<div class="panel-heading">Pie Chart</div>
+					<div class="panel-heading">Percentage Consumption per Floor</div>
 					<div class="panel-body">
 						<div class="canvas-wrapper">
 							<canvas class="chart" id="pie-chart" ></canvas>
 						</div>
+						<h6 style="margin-left:1em">*All values are in watt-hour.</h6>
+						<h6 style="margin-left:1em">*Values for the current month are displayed</h6>
 					</div>
 				</div>
 			</div>
 			<div class="col-md-6">
 				<div class="panel panel-default">
-					<div class="panel-heading">Doughnut Chart</div>
+					<div class="panel-heading">Percentage Consumption per Wing</div>
 					<div class="panel-body">
 						<div class="canvas-wrapper">
 							<canvas class="chart" id="doughnut-chart" ></canvas>
 						</div>
+						<h6 style="margin-left:1em">*All values are in watt-hour.</h6>
+						<h6 style="margin-left:1em">*Values for the current month are displayed</h6>
 					</div>
 				</div>
 			</div>
