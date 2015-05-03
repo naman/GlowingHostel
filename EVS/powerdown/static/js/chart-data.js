@@ -12,7 +12,7 @@ var randomScalingFactor = function(){ return Math.round(Math.random()*1000000)};
 					pointStrokeColor : "#fff",
 					pointHighlightFill : "#fff",
 					pointHighlightStroke : "rgba(220,220,220,1)",
-					data : [600000,610200,650000,700000,715000]
+					data : [60000,61020,65000,70000,71500]
 				},
 				//hostel values
 				{
@@ -23,7 +23,7 @@ var randomScalingFactor = function(){ return Math.round(Math.random()*1000000)};
 					pointStrokeColor : "#fff",
 					pointHighlightFill : "#fff",
 					pointHighlightStroke : "rgba(48, 164, 255, 1)",
-					data : [620000,680400,670400,715000,800000]
+					data : [62000,68040,67040,71500,80000]
 				}
 			]
 
@@ -37,14 +37,14 @@ var randomScalingFactor = function(){ return Math.round(Math.random()*1000000)};
 					strokeColor : "rgba(220,220,220,0.8)",
 					highlightFill: "rgba(220,220,220,0.75)",
 					highlightStroke: "rgba(220,220,220,1)",
-					data : [600000,610200,650000,700000,715000]
+					data : [60000,61020,65000,70000,71500]
 				},
 				{
 					fillColor : "rgba(48, 164, 255, 0.2)",
 					strokeColor : "rgba(48, 164, 255, 0.8)",
 					highlightFill : "rgba(48, 164, 255, 0.75)",
 					highlightStroke : "rgba(48, 164, 255, 1)",
-					data : [620000,680400,670400,715000,800000]
+					data : [62000,68040,67040,71500,80000]
 				}
 			]
 
@@ -53,31 +53,31 @@ var randomScalingFactor = function(){ return Math.round(Math.random()*1000000)};
 	//percentage consumption per floor
 	var pieData = [
 				{
-					value: 4002308,
+					value: 10238,
 					color:"#30a5ff",
 					highlight: "#62b9fb",
 					label: "Ground Floor"
 				},
 				{
-					value: 4633020,
+					value: 16302,
 					color: "#ffb53e",
 					highlight: "#fac878",
 					label: "First Floor"
 				},
 				{
-					value: 3782089,
+					value: 17889,
 					color: "#1ebfae",
 					highlight: "#3cdfce",
 					label: "Second Floor"
 				},
 				{
-					value: 5928019,
+					value: 19289,
 					color: "#f9243f",
 					highlight: "#f6495f",
 					label: "Third Floor"
 				},
 				{
-					value: 6573849,
+					value: 15739,
 					color: "#19A319",
 					highlight: "#80CC80",
 					label: "Fourth Floor"
@@ -88,13 +88,13 @@ var randomScalingFactor = function(){ return Math.round(Math.random()*1000000)};
 	//percentage consumption per wing
 	var doughnutData = [
 					{
-						value: 2871928,
+						value: 38728,
 						color: "#ffb53e",
 						highlight: "#fac878",
 						label: "A + B/2 Wing"
 					},
 					{
-						value: 2381923,
+						value: 43812,
 						color: "#1ebfae",
 						highlight: "#3cdfce",
 						label: "B/2 + C Wing"
