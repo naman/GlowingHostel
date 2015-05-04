@@ -213,20 +213,13 @@
       // Create a light, set its position, and add it to the scene.
       scene.add(new THREE.AmbientLight(0xf0f0f0));
 
-
-
-
-
-
-
-
-
-
+      var lists = {{ratios}};
 
       // Load in the mesh and add it to the scene.
       var loader = new THREE.JSONLoader();
       loader.load( "{% static "models/bc1.json" %}", function(geometry){
-        var material = new THREE.MeshLambertMaterial({color: 0x55B663});
+        var material = new THREE.MeshLambertMaterial({color: lists[1][0]});
+        console.log("0x"+lists[0][1].toString(16));
         material.ambient.copy(material.color);
         mesh = new THREE.Mesh(geometry, material);
         scene.add(mesh);
@@ -235,7 +228,7 @@
       // Load in the mesh and add it to the scene.
       var loader = new THREE.JSONLoader();
       loader.load( "{% static "models/ab1.json" %}", function(geometry){
-        var material = new THREE.MeshLambertMaterial({color: 0x55f663});
+        var material = new THREE.MeshLambertMaterial({color: lists[0][0]});
         material.ambient.copy(material.color);
         mesh = new THREE.Mesh(geometry, material);
         scene.add(mesh);
@@ -244,7 +237,7 @@
       // Load in the mesh and add it to the scene.
       var loader = new THREE.JSONLoader();
       loader.load( "{% static "models/bc2.json" %}", function(geometry){
-        var material = new THREE.MeshLambertMaterial({color: 0x52B663});
+        var material = new THREE.MeshLambertMaterial({color: lists[1][1]});
         material.ambient.copy(material.color);
         mesh = new THREE.Mesh(geometry, material);
         scene.add(mesh);
@@ -253,7 +246,7 @@
       // Load in the mesh and add it to the scene.
       var loader = new THREE.JSONLoader();
       loader.load( "{% static "models/ab2.json" %}", function(geometry){
-        var material = new THREE.MeshLambertMaterial({color: 0x55B660});
+        var material = new THREE.MeshLambertMaterial({color: lists[0][1]});
         material.ambient.copy(material.color);
         mesh = new THREE.Mesh(geometry, material);
         scene.add(mesh);
@@ -261,7 +254,7 @@
 
       var loader = new THREE.JSONLoader();
       loader.load( "{% static "models/bc3.json" %}", function(geometry){
-        var material = new THREE.MeshLambertMaterial({color: 0x58B663});
+        var material = new THREE.MeshLambertMaterial({color: lists[1][2]});
         material.ambient.copy(material.color);
         mesh = new THREE.Mesh(geometry, material);
         scene.add(mesh);
@@ -269,7 +262,7 @@
 
       var loader = new THREE.JSONLoader();
       loader.load( "{% static "models/ab3.json" %}", function(geometry){
-        var material = new THREE.MeshLambertMaterial({color: 0x55B693});
+        var material = new THREE.MeshLambertMaterial({color: lists[0][2]});
         material.ambient.copy(material.color);
         mesh = new THREE.Mesh(geometry, material);
         scene.add(mesh);
@@ -277,7 +270,7 @@
 
       var loader = new THREE.JSONLoader();
       loader.load( "{% static "models/bc4.json" %}", function(geometry){
-        var material = new THREE.MeshLambertMaterial({color: 0x95B663});
+        var material = new THREE.MeshLambertMaterial({color: lists[1][3]});
         material.ambient.copy(material.color);
         mesh = new THREE.Mesh(geometry, material);
         scene.add(mesh);
@@ -285,7 +278,7 @@
 
       var loader = new THREE.JSONLoader();
       loader.load( "{% static "models/ab4.json" %}", function(geometry){
-        var material = new THREE.MeshLambertMaterial({color: 0x35B663});
+        var material = new THREE.MeshLambertMaterial({color: lists[0][3]});
         material.ambient.copy(material.color);
         mesh = new THREE.Mesh(geometry, material);
         scene.add(mesh);
@@ -293,7 +286,7 @@
 
       var loader = new THREE.JSONLoader();
       loader.load( "{% static "models/c5.json" %}", function(geometry){
-        var material = new THREE.MeshLambertMaterial({color: 0x55B163});
+        var material = new THREE.MeshLambertMaterial({color: lists[1][4]});
         material.ambient.copy(material.color);
         mesh = new THREE.Mesh(geometry, material);
         scene.add(mesh);
@@ -301,7 +294,7 @@
 
       var loader = new THREE.JSONLoader();
       loader.load( "{% static "models/a5.json" %}", function(geometry){
-        var material = new THREE.MeshLambertMaterial({color: 0x51B663});
+        var material = new THREE.MeshLambertMaterial({color: lists[0][4]});
         material.ambient.copy(material.color);
         mesh = new THREE.Mesh(geometry, material);
         scene.add(mesh);
